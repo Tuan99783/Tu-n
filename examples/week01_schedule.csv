@@ -1,0 +1,5 @@
+order,slot,date,title,docx_path
+1,Tiết 1,2024-09-02,Ôn tập số hữu tỉ,lessons/tiet01_on_tap.docx
+2,Tiết 2,2024-09-02,Phép cộng số hữu tỉ,lessons/tiet02_cong.docx
+3,Tiết 3,2024-09-03,Phép trừ số hữu tỉ,lessons/tiet03_tru.docx
+4,Tiết 4,2024-09-04,Luyện tập tổng hợp,lessons/tiet04_luyen_tap.docx
