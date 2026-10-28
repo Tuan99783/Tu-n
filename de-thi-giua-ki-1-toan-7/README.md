@@ -11,3 +11,12 @@ Mọi công thức đều là Equation của Word, có thể chỉnh sửa trự
 Phạm vi: Chương I (Bài 1 – 4), Bài 5; Chương III (Bài 8 – 11), Bài 12, Bài 13 (trường hợp c.c.c).
 
 Sinh lại file: `python3 src/build.py .` (cần pandoc và matplotlib). Nội dung đề nằm trong `src/content.py`.
+
+## Mã LaTeX (thư mục `latex/`)
+
+- `Bo_5_de_GKI_Toan7_chi_co_de.tex`: 5 đề, không có đáp án.
+- `Bo_5_de_GKI_Toan7_co_dap_an.tex`: cấu trúc đề + 5 đề kèm hướng dẫn chấm.
+- `De_1_GKI_Toan7.tex` … `De_5_GKI_Toan7.tex`: từng đề kèm hướng dẫn chấm.
+
+Mỗi file độc lập, biên dịch bằng **pdfLaTeX** (gói `vietnam` của vntex; hình vẽ bằng TikZ, không cần file ảnh), dùng được trên Overleaf.
+Sinh lại: `python3 src/build_latex.py latex`.

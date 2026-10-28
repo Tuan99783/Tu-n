@@ -11,8 +11,7 @@ from matplotlib.patches import Arc
 plt.rcParams["font.family"] = "DejaVu Serif"
 plt.rcParams["mathtext.fontset"] = "dejavuserif"
 
-OUT = sys.argv[1] if len(sys.argv) > 1 else "."
-os.makedirs(OUT, exist_ok=True)
+OUT = "."
 
 
 def new(w=4.2, h=2.6):
@@ -226,6 +225,11 @@ def de5_bai5():
     save(fig, "de5_bai5.png")
 
 
-for f in (de1_bai4, de2_bai4, de3_bai4, de4_bai4, de5_bai4, de1_bai5, de2_bai5, de3_bai5, de4_bai5, de5_bai5):
-    f()
-print("done")
+ALL = (de1_bai4, de2_bai4, de3_bai4, de4_bai4, de5_bai4, de1_bai5, de2_bai5, de3_bai5, de4_bai5, de5_bai5)
+
+if __name__ == "__main__":
+    OUT = sys.argv[1] if len(sys.argv) > 1 else "."
+    os.makedirs(OUT, exist_ok=True)
+    for f in ALL:
+        f()
+    print("done")
