@@ -203,11 +203,14 @@ def main():
     subprocess.run([sys.executable, os.path.join(HERE, "figures.py"), FIG], check=True)
     os.makedirs(OUT, exist_ok=True)
     all_md = intro_md()
+    exams_only = []
     for no, e in enumerate(EXAMS, 1):
         one = exam_md(no, e) + PAGEBREAK + key_md(no, e)
         pandoc(one, os.path.join(OUT, "De_%d_GKI_Toan7_KNTT.docx" % no), ref)
         all_md += PAGEBREAK + one
+        exams_only.append(exam_md(no, e))
     pandoc(all_md, os.path.join(OUT, "Bo_5_de_GKI_Toan7_KNTT_co_dap_an.docx"), ref)
+    pandoc(PAGEBREAK.join(exams_only), os.path.join(OUT, "Bo_5_de_GKI_Toan7_KNTT_chi_co_de.docx"), ref)
     print("Đã tạo file trong", OUT)
 
 
